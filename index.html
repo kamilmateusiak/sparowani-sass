@@ -20,10 +20,10 @@
                 $.scrollTo(0);
                 
                 $('#link1').click(function() { $.scrollTo($('#home'), 500); });
-                $('#link1').click(function() { $.scrollTo($('#aboutUs'), 500); });
-                $('#link1').click(function() { $.scrollTo($('#blog'), 500); });
-                $('#link1').click(function() { $.scrollTo($('#portfolio'), 500); });
-                $('#link1').click(function() { $.scrollTo($('#contact'), 500); });
+                $('#link2').click(function() { $.scrollTo($('#aboutUs'), 500); });
+                $('#link3').click(function() { $.scrollTo($('#blog'), 500); });
+                $('#link4').click(function() { $.scrollTo($('#portfolio'), 500); });
+                $('#link5').click(function() { $.scrollTo($('#contact'), 500); });
                 
             }
             );
@@ -34,23 +34,22 @@
         <div id="container">
             <div id="rectangle">
                 <div id="logo">
-                    
                     <img src="img/logo.jpg" class="logoMain"/>
                 </div>
                 
-            <div id="list">    
-                <div id="mainNavMenu">
-                    <div class="nav">
-                        <ul>
-                            <li><a id="link1" href=#>HOME</a></li>
-                            <li><a id="link2" href="#">ABOUT</a></li>
-                            <li><a id="link3" href="#">BLOG</a></li>
-                            <li><a id="link4" href="#">PORTFOLIO</a></li>
-                            <li><a id="link5" href="#">CONTACT</a></li>
-                        </ul>
+                <div id="list">    
+                    <div id="mainNavMenu">
+                        <div class="nav">
+                            <ul>
+                                <li><a id="link1" href="#">HOME</a></li>
+                                <li><a id="link2" href="#">ABOUT</a></li>
+                                <li><a id="link3" href="#">BLOG</a></li>
+                                <li><a id="link4" href="#">PORTFOLIO</a></li>
+                                <li><a id="link5" href="#">CONTACT</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
                 
             </div>
             <div style="clear: both;"></div>
@@ -83,7 +82,7 @@
             var ScrollY = $(window).scrollTop();
             
             if(ScrollY > NavY) {
-                ${'.nav'}.addClass('sticky');
+                $('.nav').addClass('sticky');
             }else {
                 $('.nav').removeClass('sticky');
             }
