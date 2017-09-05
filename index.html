@@ -9,13 +9,17 @@
         <link rel="stylesheet" href="dist/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&amp;subset=latin-ext" rel="stylesheet">
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         
         <script src="jquery.scrollTo.min.js"></script>
+        
+        $.scrollTo(0);
+        $('.nav a').click(function() { $.scrollTo($(this).attr('href'), 500); });
         
         
     </head>
     <body>
+        
+        
         <div id="container">
             <div class="rectangle">
                 <div id="logo">
@@ -26,10 +30,10 @@
                     <div id="mainNavMenu">
                         <div class="nav">
                             <ul>
-                                <li><a id="link1" href="#home">HOME</a></li>
-                                <li><a id="link2" href="#aboutUs">ABOUT</a></li>
-                                <li><a id="link3" href="#blog">BLOG</a></li>
-                                <li><a id="link4" href="#portfolio">PORTFOLIO</a></li>
+                                <li><a  href="#home">HOME</a></li>
+                                <li><a  href="#aboutUs">ABOUT</a></li>
+                                <li><a href="#blog">BLOG</a></li>
+                                <li><a href="#portfolio">PORTFOLIO</a></li>
                                 <li><a id="link5" href="#contact">CONTACT</a></li>
                             </ul>
                         </div>
@@ -56,6 +60,6 @@
             </div>
         </div>
 
-        
+    <script src="dist/js/main.js"></script>    
     </body>
 </html>
