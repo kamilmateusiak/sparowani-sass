@@ -11,4 +11,8 @@
 ### Gulp - taski
     Taski odpalamy za pomocą komendy gulp nazwa_taska.
     
-    * styles - kompiluje pliki .sass znajdujące się w folderze sass do plików css (folder css) oraz automatycznie dodaje prefixy. Aktualnie odpalamy po każdej zmianie w sassach, którą chcielibyśmy zobaczyć na stronie.
+    * concatCss - kompiluje pliki .sass znajdujące się w folderze sass do pliku main.css (folder dist/css) oraz automatycznie dodaje prefixy.
+    * concatJs - kompiluje/łaczy pliki .js znajdujące się w folderze js do pliku main.js (folder dist/js)
+    * clean - czyści zawartość folderu dist
+    * watch - nasłuchuje na zmiany w plikach .js i .sass i odpala taski concatCss i concatJs
+    * server - dostarcza nam lokalny serwer dostępny pod adresem localhost:5012 dysponujący funkcją autoodświeżania strony po zmianie w jakimkolwiek pliku, aby uruchomić wszystkie funkcjonalności należy zainstalowac dodatek 'livereload' w naszej przegladarce (http://livereload.com/extensions/)
