@@ -8,6 +8,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&amp;subset=latin-ext" rel="stylesheet">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        
+        <script src="jquery.scrollTo.min.js"></script>
+        
+        <script>
+            jQuery(function($)
+            {
+                //zresetuj scrolla
+                $.scrollTo(0);
+                
+                $('#link1').click(function() { $.scrollTo($('#home'), 500); });
+                $('#link1').click(function() { $.scrollTo($('#aboutUs'), 500); });
+                $('#link1').click(function() { $.scrollTo($('#blog'), 500); });
+                $('#link1').click(function() { $.scrollTo($('#portfolio'), 500); });
+                $('#link1').click(function() { $.scrollTo($('#contact'), 500); });
+                
+            }
+            );
+            
+        </script>
     </head>
     <body>
         <div id="container">
@@ -19,15 +40,15 @@
                 
             <div id="list">    
                 <div id="mainNavMenu">
-                    <nav>
+                    <div class="nav">
                         <ul>
-                            <li><a href=#home>HOME</a></li>
-                            <li><a href="#aboutUs">ABOUT</a></li>
-                            <li><a href="#blog">BLOG</a></li>
-                            <li><a href="#portfolio">PORTFOLIO</a></li>
-                            <li><a href="#contact">CONTACT</a></li>
+                            <li><a id="link1" href=#>HOME</a></li>
+                            <li><a id="link2" href="#">ABOUT</a></li>
+                            <li><a id="link3" href="#">BLOG</a></li>
+                            <li><a id="link4" href="#">PORTFOLIO</a></li>
+                            <li><a id="link5" href="#">CONTACT</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
                 
@@ -50,5 +71,31 @@
                 </div>
             </div>
         </div>
+    
+        <script src="jquery-3.2.1.min"></script>
+        
+        <script>
+        $(document).ready(function() {
+        var NavY = $('.nav').offset().top;
+            
+        var stickyNav = function(){
+            
+            var ScrollY = $(window).scrollTop();
+            
+            if(ScrollY > NavY) {
+                ${'.nav'}.addClass('sticky');
+            }else {
+                $('.nav').removeClass('sticky');
+            }
+            };
+            
+            stickyNav();
+            
+            $(window).scroll(function(){
+                stickyNav();
+            });
+            });
+        </script>
+        
     </body>
 </html>
