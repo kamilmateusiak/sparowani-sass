@@ -13,26 +13,11 @@
         
         <script src="jquery.scrollTo.min.js"></script>
         
-        <script>
-            jQuery(function($)
-            {
-                //zresetuj scrolla
-                $.scrollTo(0);
-                
-                $('#link1').click(function() { $.scrollTo($('#home'), 500); });
-                $('#link2').click(function() { $.scrollTo($('#aboutUs'), 500); });
-                $('#link3').click(function() { $.scrollTo($('#blog'), 500); });
-                $('#link4').click(function() { $.scrollTo($('#portfolio'), 500); });
-                $('#link5').click(function() { $.scrollTo($('#contact'), 500); });
-                
-            }
-            );
-            
-        </script>
+        
     </head>
     <body>
         <div id="container">
-            <div id="rectangle">
+            <div class="rectangle">
                 <div id="logo">
                     <img src="img/logo.jpg" class="logoMain"/>
                 </div>
@@ -41,11 +26,11 @@
                     <div id="mainNavMenu">
                         <div class="nav">
                             <ul>
-                                <li><a id="link1" href="#">HOME</a></li>
-                                <li><a id="link2" href="#">ABOUT</a></li>
-                                <li><a id="link3" href="#">BLOG</a></li>
-                                <li><a id="link4" href="#">PORTFOLIO</a></li>
-                                <li><a id="link5" href="#">CONTACT</a></li>
+                                <li><a id="link1" href="#home">HOME</a></li>
+                                <li><a id="link2" href="#aboutUs">ABOUT</a></li>
+                                <li><a id="link3" href="#blog">BLOG</a></li>
+                                <li><a id="link4" href="#portfolio">PORTFOLIO</a></li>
+                                <li><a id="link5" href="#contact">CONTACT</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,33 +56,6 @@
             </div>
         </div>
 
-    
-        <script src="jquery-3.2.1.min"></script>
         
-        <script>
-        $(document).ready(function() {
-        var NavY = $('.nav').offset().top;
-            
-        var stickyNav = function(){
-            
-            var ScrollY = $(window).scrollTop();
-            
-            if(ScrollY > NavY) {
-                $('.nav').addClass('sticky');
-            }else {
-                $('.nav').removeClass('sticky');
-            }
-            };
-            
-            stickyNav();
-            
-            $(window).scroll(function(){
-                stickyNav();
-            });
-            });
-        </script>
-        
-        <script src="dist/js/main.js"></script>
-
     </body>
 </html>
